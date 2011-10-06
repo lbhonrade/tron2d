@@ -183,6 +183,9 @@ public class SimpleGame extends BasicGame {
 					lightcycle.getWidth() / 2.0f * scale,
 					lightcycle.getHeight() / 2.0f * scale);
 		}
+		if(input.isKeyDown(Input.KEY_3)){
+			
+		}
 	}
 
 }
