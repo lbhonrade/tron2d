@@ -28,7 +28,6 @@ public class MainMenu extends JFrame implements MouseListener{
 	 * Create the frame.
 	 */
 	public MainMenu() {
-		//setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\1st Sem 2011-2012\\CMSC 137\\Tron2D\\graphics\\menubg.png"));
 		setResizable(false);
 		setBounds(0, 0, TConstants.MENU_SCREEN_WIDTH, TConstants.MENU_SCREEN_HEIGHT);
 		getContentPane().setLayout(null);
@@ -42,8 +41,8 @@ public class MainMenu extends JFrame implements MouseListener{
 		
 		TMenuButton createBtn = new TMenuButton("CREATE GAME", TConstants.MENU_SCREEN_WIDTH/2-TConstants.UNSELECTED_BTN_BG.getIconWidth(), TConstants.MENU_SCREEN_HEIGHT/2-TConstants.UNSELECTED_BTN_BG.getIconHeight(),-1*TConstants.UNSELECTED_BTN_BG.getIconWidth(),-1*TConstants.UNSELECTED_BTN_BG.getIconHeight());
 		TMenuButton joinBtn = new TMenuButton("JOIN GAME", TConstants.MENU_SCREEN_WIDTH/2, TConstants.MENU_SCREEN_HEIGHT/2-TConstants.UNSELECTED_BTN_BG.getIconHeight()-14,TConstants.MENU_SCREEN_WIDTH,-1*TConstants.UNSELECTED_BTN_BG.getIconHeight());
-		TMenuButton observeBtn = new TMenuButton("OBSERVE GAME", TConstants.MENU_SCREEN_WIDTH/2-TConstants.UNSELECTED_BTN_BG.getIconWidth()-18, TConstants.MENU_SCREEN_HEIGHT/2,-1*TConstants.UNSELECTED_BTN_BG.getIconWidth(),TConstants.MENU_SCREEN_HEIGHT);
 		TMenuButton settingsBtn = new TMenuButton("SETTINGS", TConstants.MENU_SCREEN_WIDTH/2-18, TConstants.MENU_SCREEN_HEIGHT/2-14,TConstants.MENU_SCREEN_WIDTH,TConstants.MENU_SCREEN_HEIGHT);
+		TMenuButton observeBtn = new TMenuButton("OBSERVE GAME", TConstants.MENU_SCREEN_WIDTH/2-TConstants.UNSELECTED_BTN_BG.getIconWidth()-18, TConstants.MENU_SCREEN_HEIGHT/2,-1*TConstants.UNSELECTED_BTN_BG.getIconWidth(),TConstants.MENU_SCREEN_HEIGHT);
 		
 		this.getContentPane().add(createBtn,0);
 		this.getContentPane().add(joinBtn,0);

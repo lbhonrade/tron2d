@@ -22,7 +22,9 @@ public class TMenuButton extends TButton {
 		showHideAnimation = new Timeline(this);
 		showHideAnimation.addPropertyToInterpolate("locationX", extX, xo);
 		showHideAnimation.addPropertyToInterpolate("locationY", extY, yo);
-		showHideAnimation.setDuration(300+75*instances.indexOf(this));
+		showHideAnimation.setDuration(300);
+		showHideAnimation.setInitialDelay(150*instances.indexOf(this));
+		
 	}
 	
 	@Override
