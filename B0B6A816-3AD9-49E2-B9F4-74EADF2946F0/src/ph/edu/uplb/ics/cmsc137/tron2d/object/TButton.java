@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 import org.jdesktop.swingx.JXImagePanel;
+import org.jdesktop.swingx.JXImagePanel.Style;
 import org.jdesktop.swingx.JXLabel;
 import org.pushingpixels.trident.Timeline;
 
@@ -41,6 +42,7 @@ public class TButton extends JLabel implements MouseListener{
 		pressedBG=new JXImagePanel();
 		pressedBG.setBounds(0,0,TConstants.PRESSED_BTN_BG.getIconWidth(), TConstants.PRESSED_BTN_BG.getIconHeight());
 		pressedBG.setImage(TConstants.PRESSED_BTN_BG.getImage());
+		pressedBG.setStyle(Style.SCALED);
 		pressedBG.setOpaque(false);
 		pressedBG.setAlpha(0f);
 		this.add(pressedBG);
@@ -48,6 +50,7 @@ public class TButton extends JLabel implements MouseListener{
 		hoveredBG=new JXImagePanel();
 		hoveredBG.setBounds(0,0,TConstants.HOVERED_BTN_BG.getIconWidth(), TConstants.HOVERED_BTN_BG.getIconHeight());
 		hoveredBG.setImage(TConstants.HOVERED_BTN_BG.getImage());
+		hoveredBG.setStyle(Style.SCALED);
 		hoveredBG.setOpaque(false);
 		hoveredBG.setAlpha(0f);
 		this.add(hoveredBG);
@@ -55,6 +58,7 @@ public class TButton extends JLabel implements MouseListener{
 		commonBG=new JXImagePanel();
 		commonBG.setBounds(0,0,TConstants.UNSELECTED_BTN_BG.getIconWidth(), TConstants.UNSELECTED_BTN_BG.getIconHeight());
 		commonBG.setImage(TConstants.UNSELECTED_BTN_BG.getImage());
+		commonBG.setStyle(Style.SCALED);
 		commonBG.setOpaque(false);
 		this.add(commonBG);
 		
@@ -72,6 +76,28 @@ public class TButton extends JLabel implements MouseListener{
 		setLocation(xo, yo);
 	}
 
+	public Font getTextFont() {
+		return text.getFont();
+	}
+	
+	public void setTextFont(Font font) {
+		text.setFont(font);
+	}
+	
+	@Override
+	public void setSize(int w,int h){
+		super.setSize(w,h);
+		hoveredBG.setSize(w,h);
+		commonBG.setSize(w,h);
+		pressedBG.setSize(w,h);
+		text.setSize(w,h);
+	}
+	
+	@Override
+	public void setFont(Font font) {
+		super.setFont(font);
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub

@@ -28,6 +28,10 @@ public class TConstants {
 	public static final ImageIcon UNSELECTED_BTN_BG=new ImageIcon("graphics/unselected_btn.png");
 	public static final ImageIcon HOVERED_BTN_BG=new ImageIcon("graphics/selected_btn.png");
 	public static final ImageIcon PRESSED_BTN_BG=new ImageIcon("graphics/pressed_btn.png");
+	public static final ImageIcon DIALOG_BG_TL=new ImageIcon("graphics/dialog-box-tl.png");
+	public static final ImageIcon DIALOG_BG_TR=new ImageIcon("graphics/dialog-box-tr.png");
+	public static final ImageIcon DIALOG_BG_BL=new ImageIcon("graphics/dialog-box-bl.png");
+	public static final ImageIcon DIALOG_BG_BR=new ImageIcon("graphics/dialog-box-br.png");
 	
 	//Game Constants
 	public static final Integer GAME_SCREEN_WIDTH=600;
