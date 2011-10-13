@@ -11,12 +11,13 @@ import ph.edu.uplb.ics.cmsc137.tron2d.data.TConstants;
 
 public class TronChannel {
 	public MulticastSocket socket;
-    public InetAddress mCastAddress;
-    public boolean isListening = false;
-    private PacketReceiver globalHandler;
+	public InetAddress mCastAddress;
+	public boolean isListening = false;
+	private PacketReceiver globalHandler;
 	public WeakReference<GridGame> currentGame;
-	
-	public TronChannel(String clusterName,WeakReference<GridGame> cg) throws IOException,UnknownHostException {
+
+	public TronChannel(WeakReference<GridGame> cg) throws IOException,
+			UnknownHostException {
 		socket = new MulticastSocket(TConstants.connectionPort);
 		mCastAddress = InetAddress.getByName(TConstants.mCastAddress);
 		socket.joinGroup(mCastAddress);
@@ -25,8 +26,8 @@ public class TronChannel {
 		globalHandler.start();
 		currentGame = cg;
 	}
-	
-	public void send(String data){
-		new MulticastMessageSender(this,data).send();
+
+	public void send(String data) {
+		new MulticastMessageSender(this, data).send();
 	}
 }
